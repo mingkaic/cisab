@@ -74,4 +74,3 @@ workflows:
   test-cisab-workflow:
     jobs:
       - build-test
-      - build-deploy
