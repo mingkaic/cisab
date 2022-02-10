@@ -1,0 +1,29 @@
+licenses(["notice"])
+
+package(
+    default_visibility = ["//visibility:public"],
+)
+
+######### GENERAL SOURCE #########
+
+filegroup(
+    name = "srcs",
+    srcs = [
+        "//fmts:srcs",
+        "//logs:srcs",
+		"//types:srcs",
+        "BUILD.bazel",
+    ],
+)
+
+######### DEVELOPER TOOLS ########
+
+load("@com_grail_bazel_compdb//:aspects.bzl", "compilation_database")
+compilation_database(
+    name = "compdb",
+    targets = [
+		"//fmts:fmts",
+		"//logs:logs",
+		"//types:types",
+    ],
+)
