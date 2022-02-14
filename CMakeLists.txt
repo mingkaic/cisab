@@ -33,11 +33,11 @@ include_directories(
 add_library(types INTERFACE)
 
 # fmts
-add_library(fmts fmts/src/fmts.cpp)
+add_library(fmts fmts/src/format.cpp fmts/src/ireadable.cpp)
 target_link_libraries(fmts PUBLIC types)
 
 # logs
-add_library(logs logs/src/logs.cpp)
+add_library(logs logs/src/logger.cpp)
 target_link_libraries(logs PUBLIC fmts)
 
 #### install ####
