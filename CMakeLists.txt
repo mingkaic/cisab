@@ -43,10 +43,18 @@ target_link_libraries(logs PUBLIC fmts)
 #### install ####
 if(cisab_INSTALL)
     foreach(_HDR
+        fmts/bwd_compatible.hpp
         fmts/fmts.hpp
+        fmts/format.hpp
+        fmts/ireadable.hpp
+        fmts/istreamable.hpp
         fmts/istringable.hpp
+        fmts/readable.hpp
         logs/ilogs.hpp
+        logs/logger.hpp
         logs/logs.hpp
+        types/iterators.hpp
+        types/math.hpp
         types/strs.hpp
         types/types.hpp
     )
