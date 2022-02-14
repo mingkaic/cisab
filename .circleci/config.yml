@@ -71,7 +71,16 @@ jobs:
 
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  test-cisab-workflow:
+  weekly-deploy-update:
+    when:
+    and:
+      - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+      - equal: [ "weekly build", << pipeline.schedule.name >> ]
     jobs:
       - build-test
-      - build-deploy
+      - build-deploy:
+          requires:
+            - build-test
+  merge-test-workflow:
+    jobs:
+      - build-test

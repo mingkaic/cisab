@@ -87,7 +87,7 @@ conan_upload:
 	conan upload cisab/${VERSION}@mingkaic-co/stable --all --remote mingkaic-co
 
 .PHONY: conan_create_n_upload
-conan_create_n_upload: conan_create conan_upload
+conan_create_n_upload: conan_install conan_create conan_upload
 
 #### compile db (uncomment to generate)
 
