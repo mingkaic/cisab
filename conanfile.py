@@ -16,7 +16,6 @@ class CisabConan(ConanFile):
     description = "C++ basic utility packages."
     topics = ["conan", "utility"]
     settings = "os", "compiler", "build_type", "arch"
-    requires = ("gtest/1.10.0"),
     generators = "cmake", "cmake_find_package_multi"
 
     options = {

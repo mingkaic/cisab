@@ -5,7 +5,7 @@ project(cisab C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-option(PACKAGE_TESTS "Build the tests" ON)
+option(PACKAGE_TESTS "Build the tests" OFF)
 
 set(cisab_INSTALL_default ON)
 if(NOT CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
@@ -74,22 +74,19 @@ endif()
 
 if(PACKAGE_TESTS)
     enable_testing()
+
+	set(FMTS_TEST fmts_test)
+	add_executable(${FMTS_TEST} fmts/test/main.cpp)
+	target_link_libraries(${FMTS_TEST} ${CONAN_LIBS_GTEST} fmts)
+	add_test(NAME ${FMTS_TEST} COMMAND ${FMTS_TEST})
+
+	set(LOGS_TEST logs_test)
+	add_executable(${LOGS_TEST} logs/test/main.cpp)
+	target_link_libraries(${LOGS_TEST} ${CONAN_LIBS_GTEST} logs)
+	add_test(NAME ${LOGS_TEST} COMMAND ${LOGS_TEST})
+
+	set(TYPES_TEST types_test)
+	add_executable(${TYPES_TEST} types/test/main.cpp)
+	target_link_libraries(${TYPES_TEST} ${CONAN_LIBS_GTEST} types)
+	add_test(NAME ${TYPES_TEST} COMMAND ${TYPES_TEST})
 endif()
-
-# fmts
-set(FMTS_TEST fmts_test)
-add_executable(${FMTS_TEST} fmts/test/main.cpp)
-target_link_libraries(${FMTS_TEST} ${CONAN_LIBS_GTEST} fmts)
-add_test(NAME ${FMTS_TEST} COMMAND ${FMTS_TEST})
-
-# logs
-set(LOGS_TEST logs_test)
-add_executable(${LOGS_TEST} logs/test/main.cpp)
-target_link_libraries(${LOGS_TEST} ${CONAN_LIBS_GTEST} logs)
-add_test(NAME ${LOGS_TEST} COMMAND ${LOGS_TEST})
-
-# types
-set(TYPES_TEST types_test)
-add_executable(${TYPES_TEST} types/test/main.cpp)
-target_link_libraries(${TYPES_TEST} ${CONAN_LIBS_GTEST} types)
-add_test(NAME ${TYPES_TEST} COMMAND ${TYPES_TEST})
