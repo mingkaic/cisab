@@ -66,7 +66,7 @@ if(cisab_INSTALL)
     install(TARGETS
         fmts
         logs
-        #types
+        types
         EXPORT ${TargetFile}
         RUNTIME DESTINATION ${cisab_INSTALL_BINDIR}
         LIBRARY DESTINATION ${cisab_INSTALL_LIBDIR}
