@@ -47,4 +47,4 @@ class CisabConan(ConanFile):
     def package_info(self):
         self.cpp_info.names["cmake_find_package"] = self.name
         self.cpp_info.names["cmake_find_package_multi"] = self.name
-        self.cpp_info.libs = ["fmts", "logs", "types"]
+        self.cpp_info.libs = ["fmts", "logs"]
