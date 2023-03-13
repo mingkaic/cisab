@@ -1,0 +1,17 @@
+licenses(["notice"])
+
+package(
+    default_visibility = ["//visibility:public"],
+)
+
+######### GENERAL SOURCE #########
+
+filegroup(
+    name = "srcs",
+    srcs = [
+        "//cisab/fmts:srcs",
+        "//cisab/logs:srcs",
+		"//cisab/types:srcs",
+        "BUILD.bazel",
+    ],
+)
