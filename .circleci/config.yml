@@ -76,9 +76,9 @@ workflows:
       equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
     jobs:
       - build-test
-      - build-deploy:
-          requires:
-            - build-test
+#      - build-deploy:
+#          requires:
+#            - build-test
   merge-test-workflow:
     when:
       not:
