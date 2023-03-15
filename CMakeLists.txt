@@ -33,30 +33,30 @@ include_directories(
 add_library(types INTERFACE)
 
 # fmts
-add_library(fmts fmts/src/format.cpp fmts/src/ireadable.cpp)
+add_library(fmts cisab/fmts/format.cc cisab/fmts/ireadable.cc)
 target_link_libraries(fmts PUBLIC types)
 
 # logs
-add_library(logs logs/src/logger.cpp)
+add_library(logs cisab/logs/logger.cc)
 target_link_libraries(logs PUBLIC fmts)
 
 #### install ####
 if(cisab_INSTALL)
     foreach(_HDR
-        fmts/bwd_compatible.hpp
-        fmts/fmts.hpp
-        fmts/format.hpp
-        fmts/ireadable.hpp
-        fmts/istreamable.hpp
-        fmts/istringable.hpp
-        fmts/readable.hpp
-        logs/ilogs.hpp
-        logs/logger.hpp
-        logs/logs.hpp
-        types/iterators.hpp
-        types/math.hpp
-        types/strs.hpp
-        types/types.hpp
+        cisab/fmts/bwd_compatible.h
+        cisab/fmts/fmts.h
+        cisab/fmts/format.h
+        cisab/fmts/ireadable.h
+        cisab/fmts/istreamable.h
+        cisab/fmts/istringable.h
+        cisab/fmts/readable.h
+        cisab/logs/ilogs.h
+        cisab/logs/logger.h
+        cisab/logs/logs.h
+        cisab/types/iterators.h
+        cisab/types/math.h
+        cisab/types/strs.h
+        cisab/types/types.h
     )
         get_filename_component(_PATH ${_HDR} PATH)
         install(FILES ${_HDR} DESTINATION "${cisab_INSTALL_INCLUDEDIR}/${_PATH}")
@@ -86,18 +86,18 @@ endif()
 
 # fmts
 set(FMTS_TEST fmts_test)
-add_executable(${FMTS_TEST} fmts/test/main.cpp)
+add_executable(${FMTS_TEST} cisab/fmts/test/main.cc)
 target_link_libraries(${FMTS_TEST} ${CONAN_LIBS_GTEST} fmts)
 add_test(NAME ${FMTS_TEST} COMMAND ${FMTS_TEST})
 
 # logs
 set(LOGS_TEST logs_test)
-add_executable(${LOGS_TEST} logs/test/main.cpp)
+add_executable(${LOGS_TEST} cisab/logs/test/main.cc)
 target_link_libraries(${LOGS_TEST} ${CONAN_LIBS_GTEST} logs)
 add_test(NAME ${LOGS_TEST} COMMAND ${LOGS_TEST})
 
 # types
 set(TYPES_TEST types_test)
-add_executable(${TYPES_TEST} types/test/main.cpp)
+add_executable(${TYPES_TEST} cisab/types/test/main.cc)
 target_link_libraries(${TYPES_TEST} ${CONAN_LIBS_GTEST} types)
 add_test(NAME ${TYPES_TEST} COMMAND ${TYPES_TEST})
