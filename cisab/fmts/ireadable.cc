@@ -3,7 +3,7 @@
 
 #include "cisab/fmts/ireadable.h"
 
-#ifdef CISAB_FMTS_IREADABLE_HPP
+#ifdef CISAB_FMTS_IREADABLE_H
 
 namespace cisab
 {

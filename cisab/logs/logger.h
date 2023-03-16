@@ -6,8 +6,8 @@
 /// Define log handling and interface
 ///
 
-#ifndef CISAB_LOGS_LOGGER_HPP
-#define CISAB_LOGS_LOGGER_HPP
+#ifndef CISAB_LOGS_LOGGER_H
+#define CISAB_LOGS_LOGGER_H
 
 #include <iostream>
 #include <memory>
@@ -256,4 +256,4 @@ void fatalf (std::string format, ARGS... args)
 
 }
 
-#endif // CISAB_LOGS_LOGGER_HPP
+#endif // CISAB_LOGS_LOGGER_H

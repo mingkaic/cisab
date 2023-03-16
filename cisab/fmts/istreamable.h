@@ -6,8 +6,8 @@
 /// Implement iStreamable convenience abstract class taking strings from stream
 ///
 
-#ifndef CISAB_FMTS_ISTREAMABLE_HPP
-#define CISAB_FMTS_ISTREAMABLE_HPP
+#ifndef CISAB_FMTS_ISTREAMABLE_H
+#define CISAB_FMTS_ISTREAMABLE_H
 
 #include <string>
 #include <sstream>
@@ -38,4 +38,4 @@ struct iStreamable : public iReadable
 
 }
 
-#endif // CISAB_FMTS_ISTREAMABLE_HPP
+#endif // CISAB_FMTS_ISTREAMABLE_H

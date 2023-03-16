@@ -1,6 +1,6 @@
 
-#ifndef CISAB_LOGS_ILOGS_HPP
-#define CISAB_LOGS_ILOGS_HPP
+#ifndef CISAB_LOGS_ILOGS_H
+#define CISAB_LOGS_ILOGS_H
 
 #include <string>
 
@@ -58,4 +58,4 @@ struct iLogger
 
 }
 
-#endif // CISAB_LOGS_ILOGS_HPP
+#endif // CISAB_LOGS_ILOGS_H

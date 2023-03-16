@@ -1,6 +1,6 @@
 
-#ifndef CISAB_TYPES_STRS_HPP
-#define CISAB_TYPES_STRS_HPP
+#ifndef CISAB_TYPES_STRS_H
+#define CISAB_TYPES_STRS_H
 
 #include <string>
 #include <vector>
@@ -31,4 +31,4 @@ using StrUMapT = std::unordered_map<std::string,VAL>;
 
 }
 
-#endif // CISAB_TYPES_STRS_HPP
+#endif // CISAB_TYPES_STRS_H

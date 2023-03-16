@@ -6,8 +6,8 @@
 /// Implement iStringable convenience abstract class writing stream from string
 ///
 
-#ifndef CISAB_FMTS_ISTRINGABLE_HPP
-#define CISAB_FMTS_ISTRINGABLE_HPP
+#ifndef CISAB_FMTS_ISTRINGABLE_H
+#define CISAB_FMTS_ISTRINGABLE_H
 
 #include <ostream>
 
@@ -35,4 +35,4 @@ struct iStringable : public iReadable
 
 }
 
-#endif // CISAB_FMTS_ISTRINGABLE_HPP
+#endif // CISAB_FMTS_ISTRINGABLE_H

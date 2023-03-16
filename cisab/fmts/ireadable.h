@@ -6,8 +6,8 @@
 /// Define readable interface and override streaming and string conversion
 ///
 
-#ifndef CISAB_FMTS_IREADABLE_HPP
-#define CISAB_FMTS_IREADABLE_HPP
+#ifndef CISAB_FMTS_IREADABLE_H
+#define CISAB_FMTS_IREADABLE_H
 
 #include <string>
 #include <ostream>
@@ -73,4 +73,4 @@ struct std::formatter<iReadable, std::string>
 
 #endif
 
-#endif // CISAB_FMTS_IREADABLE_HPP
+#endif // CISAB_FMTS_IREADABLE_H

@@ -6,8 +6,8 @@
 /// Define human readable wrappers.
 ///
 
-#ifndef CISAB_FMTS_HUMAN_READABLE_HPP
-#define CISAB_FMTS_HUMAN_READABLE_HPP
+#ifndef CISAB_FMTS_HUMAN_READABLE_H
+#define CISAB_FMTS_HUMAN_READABLE_H
 
 #include <algorithm>
 #include <ostream>
@@ -196,4 +196,4 @@ std::string readable (const T& e)
 
 }
 
-#endif // CISAB_FMTS_HUMAN_READABLE_HPP
+#endif // CISAB_FMTS_HUMAN_READABLE_H

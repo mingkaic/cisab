@@ -7,7 +7,7 @@
 
 #include "cisab/fmts/format.h"
 
-#ifdef CISAB_FMTS_FORMAT_HPP
+#ifdef CISAB_FMTS_FORMAT_H
 
 namespace cisab
 {

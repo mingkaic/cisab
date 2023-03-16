@@ -6,8 +6,8 @@
 /// Define string formatting for various types
 ///
 
-#ifndef CISAB_FMTS_FORMAT_HPP
-#define CISAB_FMTS_FORMAT_HPP
+#ifndef CISAB_FMTS_FORMAT_H
+#define CISAB_FMTS_FORMAT_H
 
 #include <algorithm>
 #include <cstdio>
@@ -109,4 +109,4 @@ void strip (std::string& s, const std::unordered_set<char>& cset);
 
 }
 
-#endif // CISAB_FMTS_FORMAT_HPP
+#endif // CISAB_FMTS_FORMAT_H

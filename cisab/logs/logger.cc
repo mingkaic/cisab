@@ -3,7 +3,7 @@
 
 #include "cisab/logs/logger.h"
 
-#ifdef CISAB_LOGS_LOGGER_HPP
+#ifdef CISAB_LOGS_LOGGER_H
 
 namespace cisab
 {

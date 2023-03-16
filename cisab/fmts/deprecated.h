@@ -1,6 +1,6 @@
 
-#ifndef CISAB_FMTS_DEPRECATED_HPP
-#define CISAB_FMTS_DEPRECATED_HPP
+#ifndef CISAB_FMTS_DEPRECATED_H
+#define CISAB_FMTS_DEPRECATED_H
 
 #include "cisab/types/iterator.h"
 
@@ -42,4 +42,4 @@ std::string to_string (const T& e)
 
 }
 
-#endif // CISAB_FMTS_DEPRECATED_HPP
+#endif // CISAB_FMTS_DEPRECATED_H

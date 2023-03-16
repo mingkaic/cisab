@@ -1,6 +1,6 @@
 
-#ifndef CISAB_TYPES_ITERATOR_HPP
-#define CISAB_TYPES_ITERATOR_HPP
+#ifndef CISAB_TYPES_ITERATOR_H
+#define CISAB_TYPES_ITERATOR_H
 
 #include <iterator>
 #include <type_traits>
@@ -54,4 +54,4 @@ using ArrValT = IterValT<ArrItT<ARR>>;
 
 }
 
-#endif // CISAB_TYPES_ITERATOR_HPP
+#endif // CISAB_TYPES_ITERATOR_H
