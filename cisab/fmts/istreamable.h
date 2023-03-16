@@ -1,5 +1,5 @@
 ///
-/// istreamable.hpp
+/// istreamable.h
 /// fmts
 ///
 /// Purpose:

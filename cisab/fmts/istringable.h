@@ -1,5 +1,5 @@
 ///
-/// istringable.hpp
+/// istringable.h
 /// fmts
 ///
 /// Purpose:

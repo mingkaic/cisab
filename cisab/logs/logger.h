@@ -1,5 +1,5 @@
 ///
-/// logger.hpp
+/// logger.h
 /// logs
 ///
 /// Purpose:
