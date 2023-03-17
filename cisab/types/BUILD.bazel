@@ -31,7 +31,6 @@ filegroup(
 cc_library(
     name = "types",
     hdrs = [":types_hdrs"],
-    copts = ["-std=c++17"],
     visibility = ["//visibility:public"],
 )
 
@@ -46,5 +45,4 @@ cc_test(
         "@gtest//:gtest",
     ],
     linkstatic = True,
-    copts = ["-std=c++17"],
 )

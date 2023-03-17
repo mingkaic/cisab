@@ -32,7 +32,6 @@ cc_library(
     name = "fmts",
     hdrs = [":fmts_hdrs"],
     srcs = [":fmts_srcs"],
-    copts = ["-std=c++17"],
     deps = ["//cisab/types"],
     visibility = ["//visibility:public"],
 )
@@ -48,5 +47,4 @@ cc_test(
         "@gtest//:gtest",
     ],
     linkstatic = True,
-    copts = ["-std=c++17"],
 )

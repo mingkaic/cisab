@@ -32,7 +32,6 @@ cc_library(
     name = "logs",
     hdrs = [":logs_hdrs"],
     srcs = [":logs_srcs"],
-    copts = ["-std=c++17"],
     deps = ["//cisab/fmts:fmts"],
     visibility = ["//visibility:public"],
 )
@@ -48,5 +47,4 @@ cc_test(
         "@gtest//:gtest",
     ],
     linkstatic = True,
-    copts = ["-std=c++17"],
 )
