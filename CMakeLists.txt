@@ -51,7 +51,7 @@ if(cisab_INSTALL)
         cisab/fmts/istringable.h
         cisab/logs/ilogs.h
         cisab/logs/logger.h
-        cisab/types/iterators.h
+        cisab/types/iterator.h
         cisab/types/math.h
         cisab/types/strs.h
     )
