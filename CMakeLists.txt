@@ -43,20 +43,17 @@ target_link_libraries(logs PUBLIC fmts)
 #### install ####
 if(cisab_INSTALL)
     foreach(_HDR
-        cisab/fmts/bwd_compatible.h
-        cisab/fmts/fmts.h
+        cisab/fmts/deprecated.h
         cisab/fmts/format.h
+        cisab/fmts/human_readable.h
         cisab/fmts/ireadable.h
         cisab/fmts/istreamable.h
         cisab/fmts/istringable.h
-        cisab/fmts/readable.h
         cisab/logs/ilogs.h
         cisab/logs/logger.h
-        cisab/logs/logs.h
         cisab/types/iterators.h
         cisab/types/math.h
         cisab/types/strs.h
-        cisab/types/types.h
     )
         get_filename_component(_PATH ${_HDR} PATH)
         install(FILES ${_HDR} DESTINATION "${cisab_INSTALL_INCLUDEDIR}/${_PATH}")
