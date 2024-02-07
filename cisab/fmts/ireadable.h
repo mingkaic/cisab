@@ -47,6 +47,7 @@ std::ostream& operator << (std::ostream& os, std::shared_ptr<iReadable> reader);
 
 }
 
+/*
 #if __cplusplus > 201703L
 
 #include <format>
@@ -72,5 +73,6 @@ struct std::formatter<iReadable, std::string>
 }
 
 #endif
+*/
 
 #endif // CISAB_FMTS_IREADABLE_H

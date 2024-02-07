@@ -82,9 +82,9 @@ template <typename... ARGS>
 std::string sprintf (const std::string& format, ARGS... args)
 {
 	size_t n = std::snprintf(nullptr, 0, format.c_str(), args...) + 1;
-	char buf[n];
-	std::snprintf(buf, n, format.c_str(), args...);
-	return std::string(buf, buf + n - 1);
+	std::string out(n, ' ');
+	std::snprintf(&out[0], n+1, format.c_str(), args...);
+	return out;
 }
 
 /// Trim all white-space symbols on the left side of string s

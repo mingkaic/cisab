@@ -1,15 +1,6 @@
 licenses(["notice"])
 
-filegroup(
-    name = "srcs",
-    srcs = [
-        ":logs_hdrs",
-        ":logs_srcs",
-        ":test_srcs",
-        "BUILD.bazel",
-    ],
-    visibility = ["//visibility:public"],
-)
+TEST_SRCS = ["test.cc"]
 
 filegroup(
     name = "logs_hdrs",
@@ -18,12 +9,17 @@ filegroup(
 
 filegroup(
     name = "logs_srcs",
-    srcs = glob(["*.cc"]),
+    srcs = glob(["*.cc"], exclude=TEST_SRCS),
 )
 
 filegroup(
-    name = "test_srcs",
-    srcs = glob(["test/*.cc"]),
+    name = "srcs",
+    srcs = [
+        ":logs_hdrs",
+        ":logs_srcs",
+        "BUILD.bazel",
+    ] + TEST_SRCS,
+    visibility = ["//visibility:public"],
 )
 
 ######### LIBRARIES #########
@@ -41,7 +37,7 @@ cc_library(
 cc_test(
     name = "test",
     size = "small",
-    srcs = [":test_srcs"],
+    srcs = TEST_SRCS,
     deps = [
         ":logs",
         "@gtest//:gtest",
