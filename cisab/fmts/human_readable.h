@@ -10,13 +10,14 @@
 #define CISAB_FMTS_HUMAN_READABLE_H
 
 #include <algorithm>
-#include <ostream>
+#include <cstdint>
 #include <iterator>
 #include <memory>
-#include <utility>
+#include <ostream>
 #include <sstream>
 #include <string>
 #include <type_traits>
+#include <utility>
 
 #include "cisab/types/iterator.h"
 

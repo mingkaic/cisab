@@ -8,15 +8,9 @@ filegroup(
 )
 
 filegroup(
-    name = "types_srcs",
-    srcs = glob(["*.cc"], exclude=TEST_SRCS),
-)
-
-filegroup(
     name = "srcs",
     srcs = [
         ":types_hdrs",
-        ":types_srcs",
         "BUILD.bazel",
     ] + TEST_SRCS,
     visibility = ["//visibility:public"],
